@@ -5,7 +5,7 @@
 #include "syscalls.h"
 #include "detour\Detour.h"
 #include "scripting/script.h"
-#define VERSION "v1.0r5 alpha-hen"
+#define VERSION "v1.0r7 alpha-hen"
 
 SYS_MODULE_INFO( wor_tests, 0, 1, 1);
 SYS_MODULE_START( _wor_tests_prx_entry );
@@ -77,6 +77,14 @@ extern "C" int _wor_tests_prx_entry(void)
 	if (allow_controller_for_all_instruments_symbol) {
 		printf("debug_use_motion_blur symbol data: %p %d %d\n", allow_controller_for_all_instruments_symbol->union_type, allow_controller_for_all_instruments_symbol->type, allow_controller_for_all_instruments_symbol->sourceFileNameChecksum);
 		allow_controller_for_all_instruments_symbol->union_type = 1;
+	}
+	// g_career_skip_naration
+	Script::CSymbolTableEntry* g_career_skip_naration_symbol = Script::Resolve(2634030452);
+	printf("g_career_skip_naration symbol: %p\n", g_career_skip_naration_symbol);
+
+	if (g_career_skip_naration_symbol) {
+		printf("g_career_skip_naration symbol data: %p %d %d\n", g_career_skip_naration_symbol->union_type, g_career_skip_naration_symbol->type, g_career_skip_naration_symbol->sourceFileNameChecksum);
+		g_career_skip_naration_symbol->union_type = 60;
 	}
 	// QString patches | NOT YET WORKING
 	Script::CSymbolTableEntry* debug_menu_qsymbol = Script::Resolve(2950671652);
