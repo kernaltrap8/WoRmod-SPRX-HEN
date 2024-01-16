@@ -5,7 +5,7 @@
 #include "syscalls.h"
 #include "detour\Detour.h"
 #include "scripting/script.h"
-#define VERSION "v1.1 alpha-hen"
+#define VERSION "v1.1r1 alpha-hen"
 
 SYS_MODULE_INFO( wor_tests, 0, 1, 1);
 SYS_MODULE_START( _wor_tests_prx_entry );
