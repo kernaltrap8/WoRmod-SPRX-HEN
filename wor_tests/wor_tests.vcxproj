@@ -59,13 +59,10 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="detour\Detour.cpp" />
     <ClCompile Include="printf.cpp" />
     <ClCompile Include="prx.cpp" />
-    <ClCompile Include="scripting\cfuncs.cpp" />
     <ClCompile Include="scripting\script.cpp" />
     <ClCompile Include="scripting\struct.cpp" />
-    <ClCompile Include="show_dump.cpp" />
     <ClCompile Include="syscalls.cpp" />
   </ItemGroup>
   <ItemGroup>
